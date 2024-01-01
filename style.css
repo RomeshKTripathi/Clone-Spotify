@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+*{
+    margin:0;
+    padding:0;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+/* body{
+    background-color: black;
+} */
+
+.container{
+    height:100vh;
+    position: relative;
+}
+.left{
+    width:24vw;
+}
+
+.right{
+    width:76vw;
+    height: 100vh;
+}
+
+.home ul li{
+    width:24px;
+    list-style: none;
+    display: flex;
+    gap:16px;
+    padding-bottom: 13px;
+    padding-top: 10px;
+    align-items: center;
+    font-weight: 600;
+}
+
+.link{
+    cursor: pointer;
+    color:#aaa;
+    transition:0.1s;
+}
+.link:hover{
+    color:#fff;
+
+}
+
+
+
+
+.home ul{
+    margin:0;
+}
+
+.heading{
+    display: flex;
+    font-size: 11px;
+    align-items: center;
+    gap:16px;
+    box-shadow: 0px 2px 10px #121212;
+}
+.heading img{
+    width:24px;
+}
+
+.library{
+    position: relative;
+    max-height:100%;
+}
+.library-content{
+    height:200px;
+    overflow-x: auto;
+    padding: 0 10px;
+}
+
+.instruction-card{
+    width:100%;
+    background: #242424;
+    padding:15px;
+    height:140px;
+    border-radius: 7px;
+    margin:20px 0;
+}
+
+
+.spotify-playlist::-webkit-scrollbar,
+.library-content::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+  /* Track */
+  .spotify-playlist::-webkit-scrollbar-track ,
+  .library-content::-webkit-scrollbar-track {
+    background: transparent; 
+  }
+   
+  /* Handle */
+  .spotify-playlist::-webkit-scrollbar-thumb,
+  .library-content::-webkit-scrollbar-thumb {
+    background: #88888880;
+  }
+  
+  
+  /* Handle on hover */
+  .spotify-playlist::-webkit-scrollbar-thumb:hover,
+  .library-content::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+.footer{
+    min-height: 150px;
+    display: flex;
+    border-radius: 0 0 7px 7px;
+    /* position: absolute; */
+    /* bottom: 0; */
+}
+.header{
+    display: flex;
+    height:65px;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav-left-right-btn{
+    border: none;
+    background-color: black;
+    margin-left:5px;
+    cursor: pointer;
+    padding: 8px;
+    width:31px;
+    height:31px;
+    border-radius: 50%;
+    color:aqua;
+
+}
+
+.spotify-playlist{
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height:85.5%;
+    background-image: linear-gradient(to top, #121212,#1f1f1f);
+}
+
+.card-container{
+    padding:0 20px;
+    display: flex;
+}
+
+.card{
+    width:160px;
+    height:250px;
+    background-color: #141414;
+    border-radius: 7px;
+    padding:13px;
+    margin:20px 10px;
+    cursor: pointer;
+    transition:0.2s;
+}
+.card:hover{
+    background-color: #2b2b2b;
+    transition:0.2s;
+   
+}
+.card img{
+    border-radius: 7px;
+    width:134px;
+}
+.card span{
+    font-size: 16px;
+    font-weight: 600;
+    display: block;
+    margin-top: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card p{
+    margin-top: 10px;
+    font-size: 13px;
+    font-weight: 500;
+    color:#919191;
+    display: block;
+    height:100%;
+    max-height: 3em; /* Adjust as needed for two lines of text */
+    overflow: hidden;
+    position: relative;
+    line-height: 1.5em;
+}
+.card p::after{
+    content: '...';
+    position: absolute;
+    bottom: 0;
+    right:0;
+}
